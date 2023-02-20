@@ -1,0 +1,175 @@
+.pricing {
+  background-image: url("../img/pricing/pricing-background-mobile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  @include breakpoint-between($smBrP, $mdBrp) {
+    background-image: url("../img/pricing/pricing-background.png");
+    padding-top: 79px;
+    padding-bottom: 94px;
+  }
+  @include breakpoint-mf($mdBrp) {
+    background-image: url("../img/pricing/pricing-background.png");
+    background-position: top -313px left 0;
+    padding-top: 83px;
+    padding-bottom: 97px;
+  }
+  &__container {
+    @include flex(column, start, center, wrap);
+  }
+
+  &__title {
+    @include textStyle(28px, 42px, 700, #ffffff);
+    text-align: center;
+    @include breakpoint-between($smBrP, $mdBrp) {
+      @include textStyle(42px, 44px, 700, #ffffff);
+    }
+    @include breakpoint-mf($mdBrp) {
+      @include textStyle(48px, 50px, 700, #ffffff);
+    }
+  }
+
+  &__list {
+    @include flex(row, center, start, wrap);
+    row-gap: 18px;
+    column-gap: 25px;
+    margin-top: 32px;
+    @include breakpoint-between(600px, $mdBrp) {
+      justify-content: end;
+      align-items: center;
+      max-width: 581px;
+      margin-top: 39px;
+    }
+    @include breakpoint-mf($mdBrp) {
+      align-items: center;
+      column-gap: 15px;
+      margin-top: 61px;
+    }
+  }
+
+  &__offer {
+  }
+}
+
+.offer {
+  width: 257px;
+  min-height: 457px;
+  @include flex(column, start, center, wrap);
+  background-color: rgba(255, 255, 255, 0.11);
+  &__name {
+    @include textStyle(24px, 24px, 400, #ffffff);
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    background-color: rgba(255, 255, 255, 0.06);
+  }
+
+  &__price {
+    @include textStyle(60px, 62px, 600, #ffffff);
+    text-align: center;
+    margin-top: 30px;
+    &::before {
+      content: "$";
+      font-weight: 400;
+      margin-right: 2px;
+    }
+  }
+
+  &__period {
+    @include textStyle(14px, 16px, 400, #ffffff);
+    text-align: center;
+    margin-top: 20px;
+    &::after {
+      content: "";
+      display: block;
+      @include marginCenter;
+      width: 60px;
+      height: 5px;
+      background-color: #8d81ac;
+      margin-top: 38px;
+    }
+  }
+
+  &__compounds {
+    @include flex(column, center, center, wrap);
+    row-gap: 4px;
+    margin-top: 38px;
+  }
+
+  &__compound {
+    @include textStyle(14px, 18px, 400, #ffffff);
+  }
+
+  &__btn {
+    @include textStyle(15px, 15px, 400, #ffffff);
+    text-transform: uppercase;
+    padding: 15px 37px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin-top: 38px;
+    border-radius: 40px;
+  }
+}
+
+.offer--focus {
+  width: 299px;
+  min-height: 560px;
+  @include flex(column, start, center, wrap);
+  background: rgba(70, 48, 72, 0.84);
+  .offer__name {
+    @include textStyle(24px, 24px, 400, #ffffff);
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 43px;
+    padding-bottom: 43px;
+    background-color: rgba(0, 0, 0, 0.11);
+  }
+
+  .offer__price {
+    @include textStyle(82px, 90px, 600, #ffffff);
+    text-align: center;
+    margin-top: 14px;
+    &::before {
+      content: "$";
+      font-weight: 400;
+      margin-right: 3px;
+    }
+  }
+
+  .offer__period {
+    @include textStyle(14px, 16px, 400, #ffffff);
+    text-align: center;
+    margin-top: 16px;
+    &::after {
+      content: "";
+      display: block;
+      @include marginCenter;
+      width: 60px;
+      height: 5px;
+      background-color: #8d81ac;
+      margin-top: 46px;
+    }
+  }
+
+  .offer__compounds {
+    @include flex(column, center, center, wrap);
+    row-gap: 4px;
+    margin-top: 40px;
+  }
+
+  .offer__compound {
+    @include textStyle(16px, 18px, 400, #ffffff);
+  }
+
+  .offer__btn {
+    @include textStyle(15px, 15px, 400, #ffffff);
+    text-transform: uppercase;
+    padding: 15px 37px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin-top: 83px;
+    border-radius: 40px;
+  }
+}

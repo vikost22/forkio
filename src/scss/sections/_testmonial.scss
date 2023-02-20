@@ -5,6 +5,7 @@
   font-family: $lato-font;
   color: #ffffff;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .testmonial {
@@ -51,8 +52,11 @@
       background-color: #645766;
       @include marginCenter;
       margin-top: 20px;
-      @include breakpoint-between($smBrP, $mdBrp) {
-        width: 550px;
+      @include breakpoint-between($smBrP, 580px) {
+        max-width: 350px;
+      }
+      @include breakpoint-between(581px, $mdBrp) {
+        max-width: 550px;
       }
       @media (max-width: 480px) {
         width: 245px;
