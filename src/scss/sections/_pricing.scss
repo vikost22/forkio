@@ -82,6 +82,7 @@
     @include textStyle(14px, 16px, 400, #ffffff);
     text-align: center;
     margin-top: 20px;
+    text-transform: uppercase;
     &::after {
       content: "";
       display: block;
