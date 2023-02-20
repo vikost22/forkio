@@ -1,0 +1,159 @@
+.about-editor {
+    background-image: url("../img/about-editor/editor-mobile.png");
+    background-repeat: no-repeat;
+    background-position: bottom 0 right 0;
+    padding-top: 32px;
+    padding-bottom: 445px;
+    @include breakpoint-between($smBrP, $mdBrp){
+        padding-top: 60px;
+        padding-bottom: 595px;
+        background-image: url("../img/about-editor/editor-desktop.png");
+    }
+    @include breakpoint-mf($mdBrp){
+        background-color: #F4F4F4;
+        padding-top: 94px;
+        padding-bottom: 71px;
+        background-image: url("../img/about-editor/editor-desktop.png");
+        background-position: top 159px right -10px;
+    }
+
+    &__container{
+        @include flex(column, start, center, wrap);
+        @include breakpoint-between($smBrP, $mdBrp){
+            align-items: start;
+        }
+        @include breakpoint-mf($mdBrp){
+            flex-direction: row-reverse;
+            align-items: start;
+            column-gap: 90px;
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__advantage {
+        @include flex(column, start, center, nowrap);
+        @include breakpoint-between($smBrP, $mdBrp){
+            flex-direction: row;
+            align-items: start;
+            margin-top: 60px;
+            &:nth-child(1){
+                margin-top: 50px;
+            }
+            &:nth-child(1) img{
+                margin-left: 30px;
+                margin-right: 23px;
+            }
+            &:nth-child(2) img{
+                margin-left: 31px;
+                margin-right: 43px;
+            }
+            &:nth-child(3) img{
+                margin-left: 46px;
+                margin-right: 58px;
+            }
+            &:nth-child(4) img{
+                margin-left: 41px;
+                margin-right: 53px;
+            }
+        }
+        @include breakpoint-mf($mdBrp){
+            flex-direction: row;
+            align-items: start;
+            justify-content: center;
+            margin-top: 40px;
+            &:nth-child(1){
+                margin-top: 6px;
+            }
+            &:nth-child(1) img{
+                margin-right: 23px;
+            }
+            &:nth-child(2) img{
+                margin-right: 43px;
+            }
+            &:nth-child(3) img{
+                margin-right: 58px;
+            }
+            &:nth-child(4) img{
+                margin-right: 53px;
+            } 
+        }
+    }
+
+    &__advantage-icon {
+        margin-top: 39px;
+        @include breakpoint-between($smBrP, $mdBrp){
+            margin-top: 0;
+        }
+        @include breakpoint-mf($mdBrp){
+            margin-top: 0;
+        }
+    }
+    
+    &__advantage-info{
+        @include flex(column, start, center, wrap);
+        @include breakpoint-between($smBrP, $mdBrp){
+            align-items: start;
+        }
+        @include breakpoint-mf($mdBrp){
+            align-items: start;
+        }
+    }
+
+    &__advantage-title {
+        @include textStyle(16px, 16px, 400, #323232);
+        margin-top: 24px;
+        @include breakpoint-between($smBrP, $mdBrp){
+            line-height: 21px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        @include breakpoint-mf($mdBrp){
+            line-height: 21px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__advantage-description {
+        @include textStyle(14px, 21px, 400, #848E97);
+        margin-top: 14px;
+        text-align: center;
+        max-width: 271px;
+        @include breakpoint-between($smBrP, $mdBrp){
+            max-width: 577px;
+            text-align: start;
+            margin-top: 15px;
+        }
+        @include breakpoint-mf($mdBrp){
+            max-width: 390px;
+            text-align: start;
+            margin-top: 15px;
+        }
+    }
+}
+
+.about-editor__title{
+    @include textStyle(32px, 38px, 700, #8D81AC);
+    &::before{
+        content: "<";
+    }
+    &::after{
+        content: ">";
+    }
+    // max-width: none;
+    text-align: center;
+    @include breakpoint(410px){
+        max-width: 230px; 
+    }
+    @include breakpoint-between($smBrP, $mdBrp){
+        font-size: 42px;
+        line-height: 44px;  
+        @include marginCenter;
+    }
+    @include breakpoint-mf($mdBrp){
+        font-size: 48px;
+        line-height: 50px;  
+        text-align: start;
+        min-width: 578px;
+    }
+}
