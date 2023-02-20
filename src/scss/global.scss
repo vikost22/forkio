@@ -1,0 +1,15 @@
+body {
+  font-family: $montserrat-font;
+}
+.container {
+  min-width: $smallContainer;
+  @include marginCenter;
+  padding-left: 10px;
+  padding-right: 10px;
+  @include breakpoint-between($smBrP, $mdBrp) {
+    max-width: $mdContainer;
+  }
+  @include breakpoint-mf($mdBrp) {
+    max-width: $largeContainer;
+  }
+}

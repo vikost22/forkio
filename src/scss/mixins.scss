@@ -1,0 +1,40 @@
+@mixin flex($direction, $justify, $align, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+@mixin textStyle($fontSize, $lineHeiht, $fontWeigth, $textColor) {
+  font-weight: $fontWeigth;
+  line-height: $lineHeiht;
+  color: $textColor;
+  font-size: $fontSize;
+}
+
+@mixin breakpoint($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin breakpoint-mf($size) {
+  @media (min-width: calc($size + 1px)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-between($min-size, $max-size) {
+  $min: calc($min-size + 1px);
+  $max: $max-size;
+
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin marginCenter {
+  margin-left: auto;
+  margin-right: auto;
+}
