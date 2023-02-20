@@ -2,6 +2,7 @@
   background: url("../img/about-fork/testmonials-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  
   font-family: $lato-font;
   color: #ffffff;
   text-align: center;
@@ -52,7 +53,7 @@
       @include marginCenter;
       margin-top: 20px;
       @include breakpoint-between($smBrP, $mdBrp) {
-        width: 550px;
+        max-width: 70%;
       }
       @media (max-width: 480px) {
         width: 245px;
