@@ -81,8 +81,8 @@
   &__period {
     @include textStyle(14px, 16px, 400, #ffffff);
     text-align: center;
-    margin-top: 20px;
     text-transform: uppercase;
+    margin-top: 20px;
     &::after {
       content: "";
       display: block;
@@ -143,6 +143,7 @@
   .offer__period {
     @include textStyle(14px, 16px, 400, #ffffff);
     text-align: center;
+    text-transform: uppercase;
     margin-top: 16px;
     &::after {
       content: "";
