@@ -1,0 +1,73 @@
+.testmonial-section {
+  background: url("../img/about-fork/testmonials-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: $lato-font;
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.testmonial {
+  &__title {
+    padding-top: 110px;
+    @include textStyle(48px, 50px, 700, #ffffff);
+    font-family: $montserrat-font;
+    margin-bottom: 80px;
+    @include breakpoint-between($smBrP, $mdBrp) {
+      @include textStyle(42px, 44px, 700, #ffffff);
+    }
+    @include breakpoint-between(200px, 480px) {
+      @include textStyle(36px, 48px, 700, #ffffff);
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: end;
+    gap: 110px 90px;
+    margin-bottom: 120px;
+    @include breakpoint-between($smBrP, $mdBrp) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__text {
+    @include textStyle(16px, 24px, 700, inherit);
+  }
+
+  &__bottom-text {
+    @include textStyle(14px, 21px, 400, #a291a5);
+    text-align: center;
+    &::after {
+      content: "";
+      display: block;
+      width: 780px;
+      height: 2px;
+      background-color: #645766;
+      @include marginCenter;
+      margin-top: 20px;
+      @include breakpoint-between($smBrP, 580px) {
+        max-width: 350px;
+      }
+      @include breakpoint-between(581px, $mdBrp) {
+        max-width: 550px;
+      }
+      @media (max-width: 480px) {
+        width: 245px;
+      }
+    }
+  }
+}
+.testmonial-content {
+  max-width: 315px;
+  @include flex(column, center, center, wrap);
+  gap: 25px 0;
+  font-family: $lato-font;
+  font-style: italic;
+}
