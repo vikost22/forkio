@@ -8,6 +8,9 @@
   font-family: $montserrat-font;
   min-height: 800px;
   position: relative;
+  @media (max-width: 480px) {
+    min-height: 713px;
+  }
 }
 .header-nav {
   position: relative;
