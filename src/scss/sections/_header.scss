@@ -55,17 +55,17 @@
     color: #ffffff;
   }
 }
-.header-btn {
+.header-buy-link {
   background: #8d81ac;
   border-radius: 40px;
-  min-width: 145px;
-  min-height: 37px;
+  padding: 11px 20px;
   @include textStyle(16px, 17px, 700, #ffffff);
+  border: 1px solid transparent;
   &:hover {
-    transition: 0.2s;
+    transition: transform 0.2s ease-in-out;
+    border: 1px solid #848e97;
     background-color: #ffffff;
     color: #8d81ac;
-    border: 1px solid #8d81ac;
   }
   &:active {
     background-color: #ffffff;
@@ -237,16 +237,14 @@
     }
   }
 }
-.header-bellow-btn {
-  width: 390px;
-  height: 62px;
+.header-bellow-link {
+  padding: 23px 61px;
   background: #8d81ac;
   border-radius: 40px;
-  margin-bottom: 20px;
+  cursor: pointer;
   @include textStyle(21px, 22px, 700, #ffffff);
   @media (max-width: 480px) {
-    width: 290px;
-    height: 45px;
+    padding: 15px 29px;
     font-size: 18px;
     line-height: 20px;
   }
@@ -262,12 +260,10 @@
     bottom: -65px;
     left: 0;
     right: 0;
-    @media (max-width: 480px) {
-      bottom: -58px;
-    }
   }
 }
-.bellow-btn__text {
+.bellow-link__text {
+  margin-top: 42px;
   @include textStyle(14px, 15px, 400, #848e97);
   @media (max-width: 480px) {
   }
