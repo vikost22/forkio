@@ -57,6 +57,7 @@
   min-height: 457px;
   @include flex(column, start, center, wrap);
   background-color: rgba(255, 255, 255, 0.11);
+  padding-bottom: 38px;
   &__name {
     @include textStyle(24px, 24px, 400, #ffffff);
     width: 100%;
@@ -109,7 +110,7 @@
     text-transform: uppercase;
     padding: 15px 37px;
     background-color: rgba(255, 255, 255, 0.15);
-    margin-top: 38px;
+    margin-top: auto;
     border-radius: 40px;
   }
 }
