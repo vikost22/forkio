@@ -2,17 +2,18 @@ html{
   scroll-behavior: smooth;
 }
 body {
-  font-family: $montserrat-font;
+  font-family: $mainFont;
 }
 .container {
   min-width: $smallContainer;
   @include marginCenter;
   padding-left: 10px;
   padding-right: 10px;
-  @include breakpoint-between($smBrP, $mdBrp) {
-    max-width: $mdContainer;
-  }
   @include breakpoint-mf($mdBrp) {
     max-width: $largeContainer;
+    padding: 0 80px;
+  }
+  @media (max-width:480px) {
+    padding: 0 25px;
   }
 }

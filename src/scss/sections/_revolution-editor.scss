@@ -29,7 +29,7 @@
 
   &__subtitle {
     @include textStyle(14px, 20px, 400, #323232);
-    font-family: $lato-font;
+    font-family: $descriptionFont;
     text-align: center;
     max-width: 276px;
     margin-top: 27px;
@@ -68,7 +68,7 @@
     @include flex(row, center, center, nowrap);
     column-gap: 4px;
     @include textStyle(12px, 20px, 700, #000000);
-    font-family: $lato-font;
+    font-family: $descriptionFont;
     height: 26px;
     padding-left: 10px;
     padding-right: 10px;
@@ -81,6 +81,6 @@
     border: none;
     padding: 4px 8px 8px 8px;
     @include textStyle(12px, 20px, 600, #000000);
-    font-family: $lato-font;
+    font-family: $descriptionFont;
   }
 }

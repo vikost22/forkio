@@ -2,7 +2,7 @@
   background: url("../img/about-fork/testmonials-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: $lato-font;
+  font-family: $descriptionFont;
   color: #ffffff;
   text-align: center;
   padding-bottom: 20px;
@@ -12,12 +12,14 @@
   &__title {
     padding-top: 110px;
     @include textStyle(48px, 50px, 700, #ffffff);
-    font-family: $montserrat-font;
+    font-family: $mainFont;
     margin-bottom: 80px;
-    @include breakpoint-between($smBrP, $mdBrp) {
+    @media (max-width: 993px) {
+      padding-top: 85px;
       @include textStyle(42px, 44px, 700, #ffffff);
     }
-    @include breakpoint-between(200px, 480px) {
+    @media (max-width: 480px) {
+      padding-top: 57px;
       @include textStyle(36px, 48px, 700, #ffffff);
     }
   }
@@ -29,7 +31,7 @@
     align-items: end;
     gap: 110px 90px;
     margin-bottom: 120px;
-    @include breakpoint-between($smBrP, $mdBrp) {
+    @media (max-width: 992px) {
       grid-template-columns: repeat(2, 1fr);
     }
     @media (max-width: 480px) {
@@ -52,13 +54,10 @@
       background-color: #645766;
       @include marginCenter;
       margin-top: 20px;
-      @include breakpoint-between($smBrP, 580px) {
-        max-width: 350px;
+      @media (max-width: 992px) {
+        width: 555px;
       }
-      @include breakpoint-between(581px, $mdBrp) {
-        max-width: 550px;
-      }
-      @media (max-width: 480px) {
+      @media (max-width: 620px) {
         width: 245px;
       }
     }
@@ -68,6 +67,6 @@
   max-width: 315px;
   @include flex(column, center, center, wrap);
   gap: 25px 0;
-  font-family: $lato-font;
+  font-family: $descriptionFont;
   font-style: italic;
 }

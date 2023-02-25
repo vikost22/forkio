@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
-  font-family: $montserrat-font;
+  font-family: $mainFont;
   min-height: 800px;
   position: relative;
   @media (max-width: 480px) {
@@ -36,6 +36,8 @@
   }
   &__icon {
     object-fit: contain;
+    min-width: 42px;
+    min-height: 42px;
   }
   &__title {
     @include textStyle(24px, 18px, 700, #8d81ac);
@@ -59,6 +61,8 @@
   background: #8d81ac;
   border-radius: 40px;
   padding: 11px 20px;
+  text-align: center;
+  min-width: 145px;
   @include textStyle(16px, 17px, 700, #ffffff);
   border: 1px solid transparent;
   &:hover {
@@ -70,6 +74,10 @@
   &:active {
     background-color: #ffffff;
     color: #8d81ac;
+  }
+  @media (max-width: 480px) {
+    padding: 11px 10px;
+    min-width: 120px;
   }
 }
 .burger-btn {
