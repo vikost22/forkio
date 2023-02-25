@@ -11,7 +11,7 @@
   }
   @media (min-width: $smBrP) {
     background-image: url("../img/pricing/pricing-background.png");
-    background-position: top -313px left 0;
+    // background-position: top 0 left 0;
     padding-top: 83px;
     padding-bottom: 97px;
   }
@@ -35,13 +35,18 @@
     row-gap: 18px;
     column-gap: 25px;
     margin-top: 32px;
-    @media (min-width: $smBrP) and (max-width: $mdBrp) {
+    @media (min-width: $smBrP) and (max-width: 601px){
+      margin-top: 39px;
+      justify-content: center;
+      align-items: center;
+    }
+    @media (min-width: 601px) and (max-width: $mdBrp) {
       justify-content: end;
       align-items: center;
       max-width: 581px;
       margin-top: 39px;
     }
-    @media (min-width: $smBrP) {
+    @media (min-width: $mdBrp) {
       align-items: center;
       column-gap: 15px;
       margin-top: 61px;
