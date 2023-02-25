@@ -9,10 +9,10 @@ body {
   @include marginCenter;
   padding-left: 10px;
   padding-right: 10px;
-  @include breakpoint-between($smBrP, $mdBrp) {
+  @media (min-width: $smBrP) and (max-width: $mdBrp) {
     max-width: $mdContainer;
   }
-  @include breakpoint-mf($mdBrp) {
+  @media (min-width: $mdBrp){
     max-width: $largeContainer;
   }
 }
