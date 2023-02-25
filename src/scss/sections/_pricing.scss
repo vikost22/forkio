@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   padding-top: 14px;
   padding-bottom: 14px;
-  
+
   @include breakpoint-mf($mdBrp) {
     background-image: url("../img/pricing/pricing-background.png");
     background-position: top -313px left 0;
@@ -18,7 +18,7 @@
   &__title {
     @include textStyle(28px, 42px, 700, #ffffff);
     text-align: center;
-    
+
     @include breakpoint-mf($mdBrp) {
       @include textStyle(48px, 50px, 700, #ffffff);
     }
@@ -29,15 +29,12 @@
     row-gap: 18px;
     column-gap: 25px;
     margin-top: 32px;
-    
+
     @include breakpoint-mf($mdBrp) {
       align-items: center;
       column-gap: 15px;
       margin-top: 61px;
     }
-  }
-
-  &__offer {
   }
 }
 
