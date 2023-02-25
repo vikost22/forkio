@@ -1,4 +1,4 @@
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
@@ -9,11 +9,10 @@ body {
   @include marginCenter;
   padding-left: 10px;
   padding-right: 10px;
-  @include breakpoint-mf($mdBrp) {
-    max-width: $largeContainer;
-    padding: 0 80px;
+  @media (min-width: $smBrP) and (max-width: $mdBrp) {
+    max-width: $mdContainer;
   }
-  @media (max-width:480px) {
-    padding: 0 25px;
+  @media (min-width: $mdBrp) {
+    max-width: $largeContainer;
   }
 }
