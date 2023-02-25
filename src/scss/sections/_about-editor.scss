@@ -1,159 +1,166 @@
 .about-editor {
-    background-image: url("../img/about-editor/editor-mobile.png");
-    background-repeat: no-repeat;
-    background-position: bottom 0 right 0;
-    padding-top: 32px;
-    padding-bottom: 445px;
-    @include breakpoint-between($smBrP, $mdBrp){
-        padding-top: 60px;
-        padding-bottom: 595px;
-        background-image: url("../img/about-editor/editor-desktop.png");
-    }
-    @include breakpoint-mf($mdBrp){
-        background-color: #F4F4F4;
-        padding-top: 94px;
-        padding-bottom: 71px;
-        background-image: url("../img/about-editor/editor-desktop.png");
-        background-position: top 159px right -10px;
-    }
+  background-image: url("../img/about-editor/editor-mobile.png");
+  background-repeat: no-repeat;
+  background-position: bottom 0 right 0;
+  padding-top: 32px;
+  padding-bottom: 445px;
 
-    &__container{
-        @include flex(column, start, center, wrap);
-        @include breakpoint-between($smBrP, $mdBrp){
-            align-items: start;
-        }
-        @include breakpoint-mf($mdBrp){
-            flex-direction: row-reverse;
-            align-items: start;
-            column-gap: 90px;
-            flex-wrap: nowrap;
-        }
-    }
+  @media (min-width: $smBrP) and (max-width: $mdBrp) {
+    padding-top: 60px;
+    padding-bottom: 595px;
+    background-image: url("../img/about-editor/editor-desktop.png");
+  }
+  @media (min-width: $mdBrp) and (max-width: 1200px) {
+    background-color: #f4f4f4;
+    padding-top: 94px;
+    padding-bottom: 71px;
+    background-image: url("../img/about-editor/editor-desktop.png");
+    background-position: top 159px right -91px;
+  }
+  @media (min-width: 1200px) {
+    background-color: #f4f4f4;
+    padding-top: 94px;
+    padding-bottom: 71px;
+    background-image: url("../img/about-editor/editor-desktop.png");
+    background-position: top 159px right -10px;
+  }
 
-    &__advantage {
-        @include flex(column, start, center, nowrap);
-        @include breakpoint-between($smBrP, $mdBrp){
-            flex-direction: row;
-            align-items: start;
-            margin-top: 60px;
-            &:nth-child(1){
-                margin-top: 50px;
-            }
-            &:nth-child(1) img{
-                margin-left: 30px;
-                margin-right: 23px;
-            }
-            &:nth-child(2) img{
-                margin-left: 31px;
-                margin-right: 43px;
-            }
-            &:nth-child(3) img{
-                margin-left: 46px;
-                margin-right: 58px;
-            }
-            &:nth-child(4) img{
-                margin-left: 41px;
-                margin-right: 53px;
-            }
-        }
-        @include breakpoint-mf($mdBrp){
-            flex-direction: row;
-            align-items: start;
-            justify-content: center;
-            margin-top: 40px;
-            &:nth-child(1){
-                margin-top: 6px;
-            }
-            &:nth-child(1) img{
-                margin-right: 23px;
-            }
-            &:nth-child(2) img{
-                margin-right: 43px;
-            }
-            &:nth-child(3) img{
-                margin-right: 58px;
-            }
-            &:nth-child(4) img{
-                margin-right: 53px;
-            } 
-        }
+  &__container {
+    @include flex(column, start, center, wrap);
+    @media (min-width: $smBrP) and (max-width: $mdBrp) {
+      align-items: start;
     }
+    @media (min-width: $mdBrp) {
+      flex-direction: row-reverse;
+      align-items: start;
+      column-gap: 90px;
+      flex-wrap: nowrap;
+    }
+  }
 
-    &__advantage-icon {
-        margin-top: 39px;
-        @include breakpoint-between($smBrP, $mdBrp){
-            margin-top: 0;
-        }
-        @include breakpoint-mf($mdBrp){
-            margin-top: 0;
-        }
+  &__advantage {
+    @include flex(column, start, center, nowrap);
+    @media (min-width: $smBrP) and (max-width: $mdBrp) {
+      flex-direction: row;
+      align-items: start;
+      margin-top: 60px;
+      &:nth-child(1) {
+        margin-top: 50px;
+      }
+      &:nth-child(1) img {
+        margin-left: 30px;
+        margin-right: 23px;
+      }
+      &:nth-child(2) img {
+        margin-left: 31px;
+        margin-right: 43px;
+      }
+      &:nth-child(3) img {
+        margin-left: 46px;
+        margin-right: 58px;
+      }
+      &:nth-child(4) img {
+        margin-left: 41px;
+        margin-right: 53px;
+      }
     }
-    
-    &__advantage-info{
-        @include flex(column, start, center, wrap);
-        @include breakpoint-between($smBrP, $mdBrp){
-            align-items: start;
-        }
-        @include breakpoint-mf($mdBrp){
-            align-items: start;
-        }
+    @media (min-width: $mdBrp) {
+      flex-direction: row;
+      align-items: start;
+      justify-content: center;
+      margin-top: 40px;
+      &:nth-child(1) {
+        margin-top: 6px;
+      }
+      &:nth-child(1) img {
+        margin-right: 23px;
+      }
+      &:nth-child(2) img {
+        margin-right: 43px;
+      }
+      &:nth-child(3) img {
+        margin-right: 58px;
+      }
+      &:nth-child(4) img {
+        margin-right: 53px;
+      }
     }
+  }
 
-    &__advantage-title {
-        @include textStyle(16px, 16px, 400, #323232);
-        margin-top: 24px;
-        @include breakpoint-between($smBrP, $mdBrp){
-            line-height: 21px;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-        @include breakpoint-mf($mdBrp){
-            line-height: 21px;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
+  &__advantage-icon {
+    margin-top: 39px;
+    @media (min-width: $smBrP) and (max-width: $mdBrp) {
+      margin-top: 0;
     }
+    @media (min-width: $mdBrp) {
+      margin-top: 0;
+    }
+  }
 
-    &__advantage-description {
-        @include textStyle(14px, 21px, 400, #848E97);
-        margin-top: 14px;
-        text-align: center;
-        max-width: 271px;
-        @include breakpoint-between($smBrP, $mdBrp){
-            max-width: 577px;
-            text-align: start;
-            margin-top: 15px;
-        }
-        @include breakpoint-mf($mdBrp){
-            max-width: 390px;
-            text-align: start;
-            margin-top: 15px;
-        }
+  &__advantage-info {
+    @include flex(column, start, center, wrap);
+    @media (min-width: $smBrP) and (max-width: $mdBrp) {
+      align-items: start;
     }
+    @media (min-width: $mdBrp) {
+      align-items: start;
+    }
+  }
+
+  &__advantage-title {
+    @include textStyle(16px, 16px, 400, #323232);
+    margin-top: 24px;
+    @media (min-width: $smBrP) and (max-width: $mdBrp) {
+      line-height: 21px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    @media (min-width: $mdBrp) {
+      line-height: 21px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__advantage-description {
+    @include textStyle(14px, 21px, 400, #848e97);
+    margin-top: 14px;
+    text-align: center;
+    max-width: 271px;
+    @media (min-width: $smBrP) and (max-width: $mdBrp) {
+      max-width: 577px;
+      text-align: start;
+      margin-top: 15px;
+    }
+    @media (min-width: $mdBrp) {
+      max-width: 390px;
+      text-align: start;
+      margin-top: 15px;
+    }
+  }
 }
 
-.about-editor__title{
-    @include textStyle(32px, 38px, 700, #8D81AC);
-    &::before{
-        content: "<";
-    }
-    &::after{
-        content: ">";
-    }
-    // max-width: none;
-    text-align: center;
-    @include breakpoint(410px){
-        max-width: 230px; 
-    }
-    @include breakpoint-between($smBrP, $mdBrp){
-        font-size: 42px;
-        line-height: 44px;  
-        @include marginCenter;
-    }
-    @include breakpoint-mf($mdBrp){
-        font-size: 48px;
-        line-height: 50px;  
-        text-align: start;
-        min-width: 578px;
-    }
+.about-editor__title {
+  @include textStyle(32px, 38px, 700, #8d81ac);
+  &::before {
+    content: "<";
+  }
+  &::after {
+    content: ">";
+  }
+  text-align: center;
+  @media (max-width: 410px) {
+    max-width: 230px;
+  }
+  @media (min-width: $smBrP) and (max-width: $mdBrp) {
+    font-size: 42px;
+    line-height: 44px;
+    @include marginCenter;
+  }
+  @media (min-width: $mdBrp) {
+    font-size: 48px;
+    line-height: 50px;
+    text-align: start;
+    min-width: 578px;
+  }
 }

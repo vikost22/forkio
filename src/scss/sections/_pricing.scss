@@ -4,12 +4,12 @@
   background-repeat: no-repeat;
   padding-top: 14px;
   padding-bottom: 14px;
-  @include breakpoint-between($smBrP, $mdBrp) {
+  @media (min-width: $smBrP) and (max-width: $mdBrp) {
     background-image: url("../img/pricing/pricing-background.png");
     padding-top: 79px;
     padding-bottom: 94px;
   }
-  @include breakpoint-mf($mdBrp) {
+  @media (min-width: $smBrP) {
     background-image: url("../img/pricing/pricing-background.png");
     background-position: top -313px left 0;
     padding-top: 83px;
@@ -22,10 +22,10 @@
   &__title {
     @include textStyle(28px, 42px, 700, #ffffff);
     text-align: center;
-    @include breakpoint-between($smBrP, $mdBrp) {
+    @media (min-width: $smBrP) and (max-width: $mdBrp) {
       @include textStyle(42px, 44px, 700, #ffffff);
     }
-    @include breakpoint-mf($mdBrp) {
+    @media (min-width: $smBrP) {
       @include textStyle(48px, 50px, 700, #ffffff);
     }
   }
@@ -35,13 +35,13 @@
     row-gap: 18px;
     column-gap: 25px;
     margin-top: 32px;
-    @include breakpoint-between(600px, $mdBrp) {
+    @media (min-width: $smBrP) and (max-width: $mdBrp) {
       justify-content: end;
       align-items: center;
       max-width: 581px;
       margin-top: 39px;
     }
-    @include breakpoint-mf($mdBrp) {
+    @media (min-width: $smBrP) {
       align-items: center;
       column-gap: 15px;
       margin-top: 61px;
