@@ -4,14 +4,13 @@
   background-repeat: no-repeat;
   padding-top: 14px;
   padding-bottom: 14px;
-  @media (min-width: $smBrP) and (max-width: $mdBrp) {
+  @media (min-width: $smBrP) {
     background-image: url("../img/pricing/pricing-background.png");
     padding-top: 79px;
     padding-bottom: 94px;
   }
-  @media (min-width: $smBrP) {
+  @media (min-width: $mdBrp) {
     background-image: url("../img/pricing/pricing-background.png");
-    // background-position: top 0 left 0;
     padding-top: 83px;
     padding-bottom: 97px;
   }
@@ -19,35 +18,26 @@
     @include flex(column, start, center, wrap);
   }
 
-  &__title {
-    @include textStyle(28px, 42px, 700, #ffffff);
-    text-align: center;
-    @media (min-width: $smBrP) and (max-width: $mdBrp) {
-      @include textStyle(42px, 44px, 700, #ffffff);
-    }
-    @media (min-width: $smBrP) {
-      @include textStyle(48px, 50px, 700, #ffffff);
-    }
-  }
-
   &__list {
     @include flex(row, center, start, wrap);
     row-gap: 18px;
     column-gap: 25px;
     margin-top: 32px;
-    @media (min-width: $smBrP) and (max-width: 601px) {
+    @media (min-width: $smBrP) {
       margin-top: 39px;
       justify-content: center;
       align-items: center;
     }
-    @media (min-width: 601px) and (max-width: $mdBrp) {
+    @media (min-width: 601px) {
       justify-content: end;
       align-items: center;
       max-width: 581px;
       margin-top: 39px;
     }
     @media (min-width: $mdBrp) {
+      justify-content: center;
       align-items: center;
+      max-width: none;
       column-gap: 15px;
       margin-top: 61px;
     }
@@ -92,7 +82,7 @@
       @include marginCenter;
       width: 60px;
       height: 5px;
-      background-color: #8d81ac;
+      background-color: $accentColor;
       margin-top: 38px;
     }
   }
@@ -154,7 +144,7 @@
       @include marginCenter;
       width: 60px;
       height: 5px;
-      background-color: #8d81ac;
+      background-color: $accentColor;
       margin-top: 46px;
     }
   }

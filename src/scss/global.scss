@@ -9,10 +9,21 @@ body {
   @include marginCenter;
   padding-left: 10px;
   padding-right: 10px;
-  @media (min-width: $smBrP) and (max-width: $mdBrp) {
+  @media (min-width: $smBrP) {
     max-width: $mdContainer;
   }
   @media (min-width: $mdBrp) {
     max-width: $largeContainer;
+  }
+}
+
+.section-title {
+  @include textStyle(36px, 42px, 700, #ffffff);
+  text-align: center;
+  @media (min-width: $smBrP) {
+    @include textStyle(42px, 44px, 700, #ffffff);
+  }
+  @media (min-width: $smBrP) {
+    @include textStyle(48px, 50px, 700, #ffffff);
   }
 }

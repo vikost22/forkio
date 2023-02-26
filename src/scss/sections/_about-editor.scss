@@ -5,12 +5,12 @@
   padding-top: 32px;
   padding-bottom: 445px;
 
-  @media (min-width: $smBrP) and (max-width: $mdBrp) {
+  @media (min-width: $smBrP) {
     padding-top: 60px;
     padding-bottom: 595px;
     background-image: url("../img/about-editor/editor-desktop.png");
   }
-  @media (min-width: $mdBrp) and (max-width: 1200px) {
+  @media (min-width: $mdBrp) {
     background-color: #f4f4f4;
     padding-top: 94px;
     padding-bottom: 71px;
@@ -27,7 +27,7 @@
 
   &__container {
     @include flex(column, start, center, wrap);
-    @media (min-width: $smBrP) and (max-width: $mdBrp) {
+    @media (min-width: $smBrP) {
       align-items: start;
     }
     @media (min-width: $mdBrp) {
@@ -40,7 +40,7 @@
 
   &__advantage {
     @include flex(column, start, center, nowrap);
-    @media (min-width: $smBrP) and (max-width: $mdBrp) {
+    @media (min-width: $smBrP) {
       flex-direction: row;
       align-items: start;
       margin-top: 60px;
@@ -89,7 +89,7 @@
 
   &__advantage-icon {
     margin-top: 39px;
-    @media (min-width: $smBrP) and (max-width: $mdBrp) {
+    @media (min-width: $smBrP) {
       margin-top: 0;
     }
     @media (min-width: $mdBrp) {
@@ -99,7 +99,7 @@
 
   &__advantage-info {
     @include flex(column, start, center, wrap);
-    @media (min-width: $smBrP) and (max-width: $mdBrp) {
+    @media (min-width: $smBrP) {
       align-items: start;
     }
     @media (min-width: $mdBrp) {
@@ -110,7 +110,7 @@
   &__advantage-title {
     @include textStyle(16px, 16px, 400, #323232);
     margin-top: 24px;
-    @media (min-width: $smBrP) and (max-width: $mdBrp) {
+    @media (min-width: $smBrP) {
       line-height: 21px;
       margin-top: 0;
       margin-bottom: 0;
@@ -123,11 +123,11 @@
   }
 
   &__advantage-description {
-    @include textStyle(14px, 21px, 400, #848e97);
+    @include textStyle(14px, 21px, 400, $descriptionColor);
     margin-top: 14px;
     text-align: center;
     max-width: 271px;
-    @media (min-width: $smBrP) and (max-width: $mdBrp) {
+    @media (min-width: $smBrP) {
       max-width: 577px;
       text-align: start;
       margin-top: 15px;
@@ -141,25 +141,20 @@
 }
 
 .about-editor__title {
-  @include textStyle(32px, 38px, 700, #8d81ac);
+  color: $accentColor;
   &::before {
     content: "<";
   }
   &::after {
     content: ">";
   }
-  text-align: center;
   @media (max-width: 410px) {
     max-width: 230px;
   }
-  @media (min-width: $smBrP) and (max-width: $mdBrp) {
-    font-size: 42px;
-    line-height: 44px;
+  @media (min-width: $smBrP) {
     @include marginCenter;
   }
   @media (min-width: $mdBrp) {
-    font-size: 48px;
-    line-height: 50px;
     text-align: start;
     min-width: 578px;
   }

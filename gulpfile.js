@@ -29,5 +29,4 @@ const mainTasks = gulp.parallel(styles, scripts, images);
 
 // Scripting
 export const build = gulp.series(reset, mainTasks);
-const dev = gulp.parallel(serve, watcher);
-export default dev;
+export const dev = gulp.parallel(serve, watcher);
