@@ -2,25 +2,29 @@
   background: url("../img/about-fork/testmonials-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50%;
   font-family: $descriptionFont;
   color: #ffffff;
   text-align: center;
   padding-bottom: 20px;
+  @media (max-width: 993px) {
+    background-image: url("../img/about-fork/testmonials-bg-for-tabs.jpg");
+  }
+  @media (max-width: 480px) {
+    background-image: url("../img/about-fork/testmonials-bg-for-mobile.jpg");
+  }
 }
 
 .testmonial {
   &__title {
     padding-top: 110px;
-    @include textStyle(48px, 50px, 700, #ffffff);
-    font-family: $mainFont;
     margin-bottom: 80px;
     @media (max-width: 993px) {
       padding-top: 85px;
-      @include textStyle(42px, 44px, 700, #ffffff);
     }
     @media (max-width: 480px) {
       padding-top: 57px;
-      @include textStyle(36px, 48px, 700, #ffffff);
+      margin-bottom: 50px;
     }
   }
 
@@ -33,9 +37,11 @@
     margin-bottom: 120px;
     @media (max-width: 992px) {
       grid-template-columns: repeat(2, 1fr);
+      gap: 58px 63px;
     }
     @media (max-width: 480px) {
       grid-template-columns: repeat(1, 1fr);
+      gap: 45px 0;
     }
   }
 
